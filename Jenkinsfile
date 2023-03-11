@@ -2,8 +2,6 @@ pipeline{
     
     agent any 
 
-  
-    
     stages {
         
         stage('Git Checkout'){
@@ -17,18 +15,19 @@ pipeline{
                 }
             }
         }
-        stage('UNIT testing'){
+       stage('UNIT testing'){
             
-            steps{
+           steps{
                 
-                script{
-                    
+               script{
+
                     sh 'mvn test'
                 }
             }
         }
+      
         stage('Integration testing'){
-            
+        
             steps{
                 
                 script{
@@ -43,7 +42,7 @@ pipeline{
                 
         //         script{
                     
-        //             sh 'mvn clean install'
+        //             bat 'mvn clean install'
         //         }
         //     }
         // }
