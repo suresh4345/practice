@@ -41,7 +41,7 @@ pipeline{
                 
         //         script{
                     
-        //             sh 'mvn clean install'
+        //             bat 'mvn clean install'
         //         }
         //     }
         // }
