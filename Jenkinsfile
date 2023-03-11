@@ -1,9 +1,8 @@
 pipeline{
     
     agent any 
-     tools {
-        maven 'maven-3.9.0'
-    }
+
+  
     
     stages {
         
@@ -24,20 +23,20 @@ pipeline{
                 
                 script{
                     
-                    sh ' mvn clean test'
+                    sh 'mvn test'
                 }
             }
         }
-        // stage('Integration testing'){
+        stage('Integration testing'){
             
-        //     steps{
+            steps{
                 
-        //         script{
+                script{
                     
-        //             sh 'mvn verify -DskipUnitTests'
-        //         }
-        //     }
-        // }
+                    sh 'mvn verify -DskipUnitTests'
+                }
+            }
+        }
         // stage('Maven build'){
             
         //     steps{
