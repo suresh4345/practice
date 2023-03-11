@@ -21,7 +21,7 @@ pipeline{
                 
                 script{
                     
-                    sh 'mvn test'
+                    sh 'start /B mvn test'
                 }
             }
         }
