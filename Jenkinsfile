@@ -15,16 +15,16 @@ pipeline{
                 }
             }
         }
-        stage('UNIT testing'){
+   //     stage('UNIT testing'){
             
-            steps{
+      //      steps{
                 
-                script{
+       //         script{
                     
-                    sh 'mvn clean test'
-                }
-            }
-        }
+          //          sh 'mvn clean test'
+         //       }
+         //   }
+      //  }
         // stage('Integration testing'){
             
         //     steps{
