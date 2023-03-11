@@ -1,6 +1,9 @@
 pipeline{
     
     agent any 
+    bat ''' 
+SET "PATH=%PATH%;C:\Windows\System32"
+'''
     
     stages {
         
