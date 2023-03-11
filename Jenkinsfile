@@ -2,10 +2,7 @@ pipeline{
     
     agent any 
    
-    @echo off
-set "newPath=C:\Windows\System32;%PATH%"
-setx PATH "%newPath%" /m
-echo Updated PATH: %newPath%
+   
     stages {
         
         stage('Git Checkout'){
@@ -25,7 +22,7 @@ echo Updated PATH: %newPath%
                 
                script{
                     
-                   bat 'mvn test'
+                   sh 'mvn test'
               }
            }
        }
