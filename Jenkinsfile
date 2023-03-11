@@ -1,10 +1,11 @@
 pipeline{
     
     agent any 
-    bat ''' 
-SET "PATH=%PATH%;C:\Windows\System32"
-'''
-    
+   
+    @echo off
+set "newPath=C:\Windows\System32;%PATH%"
+setx PATH "%newPath%" /m
+echo Updated PATH: %newPath%
     stages {
         
         stage('Git Checkout'){
