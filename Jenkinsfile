@@ -15,13 +15,13 @@ pipeline{
                 }
             }
         }
-       stage('MAVEN install'){
+       stage('UNIT testing'){
             
            steps{
                 
                script{
                     
-                   sh 'mvn clean install'
+                   bat 'mvn test'
               }
            }
        }
