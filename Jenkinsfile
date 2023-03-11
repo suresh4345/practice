@@ -1,6 +1,9 @@
 pipeline{
     
     agent any 
+     tools {
+        maven 'maven-3.9.0'
+    }
     
     stages {
         
@@ -21,7 +24,7 @@ pipeline{
                 
                 script{
                     
-                    sh 'start /B mvn clean test'
+                    sh ' mvn clean test'
                 }
             }
         }
