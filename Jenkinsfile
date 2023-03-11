@@ -36,16 +36,16 @@ pipeline{
                 }
             }
         }
-        // stage('Maven build'){
+        stage('Maven build'){
             
-        //     steps{
+            steps{
                 
-        //         script{
+                script{
                     
-        //             bat 'mvn clean install'
-        //         }
-        //     }
-        // }
+                    bat 'mvn clean install'
+                }
+            }
+        }
         // stage('Static code analysis'){
             
         //     steps{
