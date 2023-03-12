@@ -46,20 +46,20 @@ pipeline{
                 }
             }
         }
-        // stage('Static code analysis'){
+        stage('Static code analysis'){
             
-        //     steps{
+            steps{
                 
-        //         script{
+                script{
                     
-        //             withSonarQubeEnv(credentialsId: 'sonar-api') {
+                    withSonarQubeEnv(credentialsId: 'sonar key') {
                         
-        //                 sh 'mvn clean package sonar:sonar'
-        //             }
-        //            }
+                        sh 'mvn clean package sonar:sonar'
+                    }
+                   }
                     
-        //         }
-        //     }
+                }
+            }
             // stage('Quality Gate Status'){
                 
             //     steps{
