@@ -70,6 +70,23 @@ pipeline{
             //         }
             //     }
             // }
+
+
+            stage('copy jar file to nexus repo'){
+
+                    steps{
+
+                            script{
+                                    nexusArtifactUploader artifacts: [[artifactId: 'springboot', classifier: '', file: 'Uber.jar', type: 'jar']], credentialsId: 'nexus-auth', groupId: 'com.example', nexusUrl: 'http://localhost:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'demoapp_release', version: '1.0.0'
+
+                            }
+
+
+                    }
+
+
+
+            }
         }
         
 }
